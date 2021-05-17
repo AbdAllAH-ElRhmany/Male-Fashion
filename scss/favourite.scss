@@ -1,0 +1,66 @@
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+
+// 3.6-ProductDetails page
+// 3.6.1 favouritePro Section
+
+
+.favouritePro{
+    .favouriteItem{
+        border-bottom: 1px solid $col-whi-d;
+        padding-bottom: 20px;
+        .favouriteItem-info{
+            >a{
+                margin-right: 30px;
+                display: flex;
+                align-items: center;
+                .favouriteItem-img{
+                    width: 140px;
+                    margin-right: 40px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .favouriteItem-text{
+                    .rating{
+                        @extend %rating;
+                    }
+    
+                }
+
+            }
+        }
+        .favouriteItem-btn{
+            button{
+                border: 0;
+                outline: 0;
+                @extend %cart-btn;
+                background-color: $col-black;
+                color: $col-whi;
+                letter-spacing: 1px;
+                max-width: 200px;
+                padding: 10px;
+                margin:  0 10px;
+            }
+        }
+    }
+}
+
+// favouritePro media
+
+@include Sm{
+    .favouriteItem{
+        border: 0;
+        justify-content: center !important;
+        flex-wrap: wrap;
+        .favouriteItem-info{
+            >a{
+                margin: 0 0 20px 0 !important;
+                display: block;
+
+            }
+        }
+    }
+}

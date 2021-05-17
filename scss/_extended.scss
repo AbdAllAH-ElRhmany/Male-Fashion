@@ -1,0 +1,351 @@
+@import 'utilities';
+@import 'media';
+// 2-General styles extends
+%sectionHeaderSubtitle{
+    display: block;
+    color: $main-col;
+    font-size: $mainFontSize - 2;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+}
+%formInput{
+    width: 100%;
+    font-size: $mainFontSize - 1;
+    border: none;
+    outline: 0;
+}
+%inputBtnIn{
+    position: absolute;
+    height: 100%;
+    right: 10px;
+    border: none;
+    outline: 0;
+    background: transparent;
+    span{
+        &::before{
+            color: $col-whi-d;
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 400; 
+        }
+    }
+}
+
+%cart-btn{
+    font-size: $mainFontSize - 3;
+    margin-top: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 35px;
+    display: inline-block;
+    cursor: pointer;
+}
+%rating{
+    margin-bottom: 10px;
+    i{
+        font-size: $mainFontSize - 4;
+        color: $col-whi-d;
+        margin-right: -5px;
+    }
+    i.active{
+        color: #f7941d;
+    }
+}
+%sizeFilterli{
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 1px solid $col-whi-dd;
+    padding: 2px 22px;
+    margin: 0 5px 10px 0;
+    &.active{
+        background-color: $col-black;
+        color: $col-whi;
+    }
+
+}
+// 3-Pages
+
+// 3.0 Common Sections Extends
+
+// 3.0.1 header section
+
+
+%headerListItemStyle{
+    display: block;
+    font-size: $mainFontSize + 2;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 2px 0;
+    position: relative;
+}
+%headerListItemStylAfter{
+    content: "";
+    left: 0;
+    border-bottom: 2px solid $main-col;
+    position: absolute;
+    @include WidHei(100%, 100%);
+    transform: scale3d(0, 1, 1);
+    -webkit-transform: scale3d(0, 1, 1);
+    -moz-transform: scale3d(0, 1, 1);
+    -ms-transform: scale3d(0, 1, 1);
+    -o-transform: scale3d(0, 1, 1);
+    @include Transition();
+    &:hover{
+        transform: scale3d(1, 1, 1);
+        -webkit-transform: scale3d(1, 1, 1);
+        -moz-transform: scale3d(1, 1, 1);
+        -ms-transform: scale3d(1, 1, 1);
+        -o-transform: scale3d(1, 1, 1);
+    }
+}
+%dropdownMenu{
+    position: absolute;
+    padding: 8px 0;
+    display: block;
+    z-index: 10;
+    width: 150px;
+    background-color: $col-black;
+    text-align: $textLeft;
+    margin-top: 2px;
+    opacity: 0;
+    visibility: hidden;
+    @include TranslatY(15px);
+    transition: opacity .3s, transform .3s;
+    -webkit-transition: opacity .3s, transform .3s;
+    -moz-transition: opacity .3s, transform .3s;
+    -ms-transition: opacity .3s, transform .3s;
+    -o-transition: opacity .3s, transform .3s;
+}
+%dropdownMenuHover{
+    opacity: 1;
+    visibility: visible;
+    @include TranslatY(0px);
+}
+%dropdownMenuItem{
+    color: $col-whi;
+    font-size: $mainFontSize - 2;
+    padding: 5px 20px;
+    text-transform: capitalize;
+}
+%userOptionsItem{
+    display: inline-block;
+    margin-right: 25px;
+    cursor: pointer;
+    :last-of-type{
+        margin: 0;
+    }
+    #cart-price{
+        display: inline-block;
+        @include TranslatY(3px);
+        margin-left: 4px;
+    }
+}
+%userControlListItem{
+    font-size: $mainFontSize - 3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 16px;
+    display: inline-block;
+    font-weight: 600;
+    a{
+        text-transform: uppercase;
+        cursor: pointer;
+        // &.username{
+        //     text-transform: none !important;
+        // }
+    }
+}
+
+%userControlLisDropdown{
+    text-transform: uppercase ;
+    cursor: pointer;
+    .menu{
+        width: auto;
+        li{
+            text-transform: uppercase;
+        }
+    }
+}
+
+// 3.0.2 footer Section
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// 3.1 home page
+
+// 3.1.1 banner Section 
+
+%bannercommon{
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    @include Transition();
+}
+
+%owlActiveItem{
+    top: 0;
+    opacity: 1;
+
+}
+%owlBtn{
+    position: absolute;  
+    cursor: pointer;
+    outline: 0 !important;
+    font-size: $mainFontSize * 1.875 !important;
+    width: 60px;
+    text-align: $textCenter;
+    z-index: 999;
+}
+
+// 3.1.2 brand section
+%brandCommon{
+    max-width: 300px;
+    position: absolute;
+    @include Dirtl(140px, -190px)
+}
+
+// 3.1.3 products Section
+
+%productCommon{
+    position: absolute;
+    cursor: pointer;
+    background-color: $col-whi;
+    opacity: 0;
+    @include Transition();
+}
+%productStyle{
+    margin-bottom: 20px;
+    user-select: none;
+    position: relative;
+    overflow-x: hidden;
+    .product-img{
+        overflow-x: hidden;
+        position: relative;
+        user-select: none;
+        a> img{
+            width: 100%;
+        }
+        .like{
+            @extend %productCommon;
+            @include Dirtr(25px,-40px);
+            padding: 10px;
+            text-align: $textCenter;
+        }
+        .case{
+            position: absolute;
+            @include Dirtl(25px,0);
+            padding: 4px 15px;
+            font-size: $mainFontSize - 5;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .case.case-new{
+            background-color: $col-whi;
+        }
+        .case.case-sale{
+            background-color: $col-black;
+            color: $col-whi;
+        }
+    }
+    .addToCart{
+        @extend %productCommon;
+        bottom: 65px;
+        width: 100%;
+        background-color: $col-whi;
+        padding: 5px;
+        font-size: $mainFontSize - 1;
+        color: $main-col;
+        text-transform: capitalize;
+        font-weight: 700;
+    }
+    .product-title{
+        font-size: 15px;
+        margin: 15px 0 5px;
+        text-transform: capitalize;
+    }
+    .rating{
+        @extend %rating;
+    } 
+    &:hover .addToCart{
+        opacity: 1;
+        bottom: 60px;
+    }
+    &:hover .product-img .like{
+        opacity: 1;
+        right: 15px !important;
+    }
+}
+
+
+// 3.1.4 offer Section
+
+// 3.1.5 instaram Section
+
+// 3.1.6 trends Section
+
+// 3.2.1 shop page 
+
+// 3.2.1 products Section
+
+// 3.3-signup/login pages
+
+// 3.3.1 sign Section
+
+
+// 3.4-cart page
+
+// 3.4.1 cartList Section
+
+
+// 3.5-ProductDetails page
+
+// 3.5.1 product-preview Section 
+
+// 3.5.2 details Section 
+
+// 3.5.3 product-info Section 
+
+
+// 3.6-ProductDetails page
+
+// 3.6.1 favouritePro Section  
+
+
+// 3.7-about page
+
+// 3.7.1 about Section  
+
+// 3.7.2 testimonial Section  
+
+// 3.7.3 counter Section  
+
+// 3.7.4 team Section  
+
+// 3.7.5 partner Section  
+
+
+// 3.8-contact page
+
+// 3.8.1 map Section
+
+// 3.8.2 contact Section
+%contactInput{
+    @include WidHei(100%, 50px);
+    border: 1px solid #e1e1e1;
+    padding-left: 20px;
+    font-size: $mainFontSize - 1;
+    color: $col-whi-d;
+}
+
+
+// 3.9-blog page
+
+// 3.9.1 blog-bg Section
+
+
+// 3.10-check out page
+
+// 3.10.1 checkOut Section

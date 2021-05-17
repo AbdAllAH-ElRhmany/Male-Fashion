@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="images/Icons/icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./style/nice-select.css" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/preLoader.css" />
+    <link rel="stylesheet" href="./style/generalStyles.css" />
+    <link rel="stylesheet" href="./style/commonSections.css" />
+    <link rel="stylesheet" href="./style/sign.css" />
+    <title>Male-Fashion | Login</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="logo col-lg-3 col-md-3">
+                    <h1><a href="index.html"><img src="images/Logos/logo.png" alt="Logo"></a></h1>
+                </div><!-- ./logo -->
+                <nav class="col-lg-6 col-md-6">
+                    <!-- The Nav Bar At md Devices -->
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-list-item">home</a></li>
+                        <li><a href="shop.html" class="nav-list-item">shop</a></li>
+                        <li><a href="about.html" class="nav-list-item">about us</a></li>
+                        <li class="dropdown">
+                            <a href="blog.html" class="nav-list-item">blog</a>
+                            <ul class="menu">
+                                <li><a href="#" class="nav-menu-item">blog details</a></li>
+                            </ul><!-- ./menu -->
+                        </li><!-- ./dropdown -->
+                        <li><a href="contact.html" class="nav-list-item">contact</a></li>
+                    </ul><!-- ./nav-list -->
+                </nav>
+                <div class="user-options col-lg-3 col-md-3">
+                    <ul class="user-options-list">
+                        <li id="searchIcon"><img src="images/Icons/search.png" alt=""></li>
+                        <li><a href="favourite.html"><img src="images/Icons/heart.png" alt=""></a></li>
+                        <li><a href="#"><img src="images/Icons/cart.png" alt=""><span id="cart-price">$0.00</span></a>
+                        </li>
+                    </ul><!-- ./user-options-list -->
+                </div><!-- ./user-options -->
+            </div><!-- ./row -->
+            <div class="small-nav-icon">
+                <i class="fas fa-bars"></i>
+            </div><!-- ./small-nav-icon -->
+        </div><!-- ./container -->
+    </header>
+    <div class="overlay"></div><!-- ./overlay -->
+    <div class="side-nav">
+        <ul class="user-control-list">
+            <li><a href="logIn.html">sign in</a></li>
+            <li><a href="signUp.html">sign up</a></li>
+            <li><a href="#">faqs</a></li>
+            <li class="dropdown">usd <i class="fas fa-chevron-down"></i>
+                <ul class="menu">
+                    <li>usd</li>
+                    <li>eur</li>
+                </ul>
+            </li><!-- ./dropdown -->
+        </ul><!-- ./user-options-list -->
+        <ul class="user-options-list">
+            <li class="searchIcon"><img src="images/Icons/search.png" alt=""></li>
+            <li><a href="favourite.html"><img src="images/Icons/heart.png" alt=""></a></li>
+            <li><a href="cart.html"><img src="images/Icons/cart.png" alt=""><span id="sm-cart-price">$0.00</span></a>
+            </li>
+        </ul><!-- ./user-options-list -->
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-list-item ">home</a></li>
+            <li><a href="shop.html" class="nav-list-item">shop</a></li>
+            <li><a href="about.html" class="nav-list-item">about us</a></li>
+            <li class="dropdown">
+                <a href="blog.html" class="nav-list-item">blog</a>
+                <ul class="menu">
+                    <li><a href="#" class="nav-menu-item">blog details</a></li>
+                </ul><!-- ./menu -->
+            </li><!-- ./dropdown -->
+            <li><a href="contact.html" class="nav-list-item">contact</a></li>
+        </ul><!-- ./nav-list -->
+        <p>Free shipping, 30-day return or refund guarantee.</p>
+
+    </div><!-- ./side-nav -->
+    <div class="overlay2"></div>
+    <form action="#" class="search-form">
+        <input type="text" placeholder="Search here...." id="searchInput" />
+        <button type="submit">Seach</button>
+        <span class="closeIcon2">X</span>
+    </form><!-- ./search-form -->
+    <div class="preloader-bg">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div><!-- ./preloader-bg -->
+    <main class="signPage">
+        <section class="sign">
+            <h2 class="sign-title mb-4">Login</h2>
+            <p class="sign-desc mb-5">Enter Login details to get access</p>
+            <form action="#" class="sign-form">
+                <label>Email Address</label>
+                <input name="email" type="text" placeholder="Email Address">
+                <label>password</label>
+                <input name="pass" type="password" placeholder="Enter password">
+                <div>
+                    <p class="sign-desc">Already have an account? <a href="signUp.html">Sign Up</a> here</p>
+                    <button type="submit" class="shop-btn">Login</button>
+                </div>
+            </form><!-- ./sign-form -->
+        </section><!-- ./sign -->
+        <div class="massage">
+            <span class="closeIcon">X</span>
+            <p></p>
+        </div><!-- ./massage -->
+    </main>
+
+
+
+
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/overlayFunctions.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

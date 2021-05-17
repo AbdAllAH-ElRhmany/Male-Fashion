@@ -1,0 +1,101 @@
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+
+// 3.10-check out page
+
+// 3.10.1 checkOut Section
+
+.checkOut{
+    .coupon{
+        font-size: $mainFontSize - 2;
+        border-top: 2px solid #77b527;
+        background: $col-whi-dd;
+        padding: 23px 30px 18px;
+        p{
+            position: relative;
+            padding-left: 30px;
+            &::before{
+                content: '\f02b';
+                position: absolute;
+                left: 0;
+                font-family: "Font Awesome 5 Free" ;
+                font-weight: 700;
+                transform: rotateZ(90deg);
+                -webkit-transform: rotateZ(90deg);
+                -moz-transform: rotateZ(90deg);
+                -ms-transform: rotateZ(90deg);
+                -o-transform: rotateZ(90deg);
+            }
+            a{
+                color: #77b527;
+            }
+        }
+    }
+    .checkout-title{
+        text-transform: uppercase;
+        border-bottom: 1px solid $col-whi-d;
+        padding-bottom: 25px;
+    }
+    .input-title{
+        text-transform: capitalize;
+        margin-bottom: 10px;
+        span{
+            color: red;
+        }
+    }
+    .checkInput{
+        @extend %contactInput;
+    }
+    .createAcc{
+        font-size: $mainFontSize - 3;
+    }
+    label{
+        cursor: pointer;
+        display: block;
+        text-transform: capitalize;
+    }
+    
+    
+    .check-total{
+        background: #f3f2ee;
+        padding: 40px;
+        .check-btn{
+            @extend %cart-btn;
+            background-color: $col-black;
+            color: $col-whi;
+            display: block;
+            text-align: center;
+        }
+    }
+    .order-menu{
+        border-bottom: 1px solid $col-whi-d;
+        padding: 20px 0;
+        margin-bottom: 20px;
+        .cart-total{
+            border-top: 1px solid $col-whi-d;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    }
+    .order-item{
+        p{
+            line-height: 2.2;
+        }
+        .title{
+            width: 80%;
+            float: left;
+        }
+        .total{
+            width: 20%;
+            float: right;
+            text-align: right;
+        }
+        #cartTotal{
+            color: #e53637;
+            font-weight: bold;
+            font-size: $mainFontSize + 2;
+        }
+    }
+}

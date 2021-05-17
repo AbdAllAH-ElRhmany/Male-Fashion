@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="images/Icons/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/preLoader.css" />
+    <link rel="stylesheet" href="./style/generalStyles.css" />
+    <link rel="stylesheet" href="./style/commonSections.css" />
+    <link rel="stylesheet" href="./style/about.css" />
+    <title>Male-Fashion | About Us</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+                <ul class="user-control-list">
+                    <ul id="log">
+                        <li><a href="logIn.html">sign in</a></li>
+                        <li><a href="signUp.html">sign up</a></li>
+                    </ul><!-- #/log -->
+                    <ul id="userLink">
+                        <li>
+                            <a href="userPage.html" class="username">user page</a>
+
+                        </li>
+                        <li><a id="logOut">log out</a></li>
+                    </ul><!-- #/userLink -->
+                    <li><a href="#">faqs</a></li>
+                    <li class="dropdown">usd <i class="fas fa-chevron-down"></i>
+                        <ul class="menu">
+                            <li>usd</li>
+                            <li>eur</li>
+                        </ul>
+                    </li><!-- ./dropdown -->
+                </ul><!-- ./user-options-list -->
+            </div><!-- ./container -->
+        </div><!-- ./top-header -->
+        <div class="container">
+            <div class="row">
+                <div class="logo col-lg-3 col-md-3">
+                    <h1><a href="index.html"><img src="images/Logos/logo.png" alt="Logo"></a></h1>
+                </div><!-- ./logo -->
+                <nav class="col-lg-6 col-md-6">
+                    <!-- The Nav Bar At md Devices -->
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-list-item">home</a></li>
+                        <li><a href="shop.html" class="nav-list-item ">shop</a></li>
+                        <li><a href="about.html" class="nav-list-item active">about us</a></li>
+                        <li class="dropdown">
+                            <a href="blog.html" class="nav-list-item">blog</a>
+                            <ul class="menu">
+                                <li><a href="#" class="nav-menu-item">blog details</a></li>
+                            </ul><!-- ./menu -->
+                        </li><!-- ./dropdown -->
+                        <li><a href="contact.html" class="nav-list-item">contact</a></li>
+                    </ul><!-- ./nav-list -->
+                </nav>
+                <div class="user-options col-lg-3 col-md-3">
+                    <ul class="user-options-list">
+                        <li id="searchIcon"><img src="images/Icons/search.png" alt=""></li>
+                        <li><a href="favourite.html"><img src="images/Icons/heart.png" alt=""></a></li>
+                        <li class="shoppingCart">
+                            <img src="images/Icons/cart.png" alt=""><span id="cart-price">$0.00</span>
+                        </li><!-- ./shoppingCart -->
+                        <div class="shoppingMenu">
+                            <p></p>
+                            <a href="cart.html" class="shop-btn">view all products</a>
+                        </div>
+                    </ul><!-- ./user-options-list -->
+                </div><!-- ./user-options -->
+            </div><!-- ./row -->
+            <div class="small-nav-icon">
+                <i class="fas fa-bars"></i>
+            </div><!-- ./small-nav-icon -->
+        </div><!-- ./container -->
+    </header>
+    <div class="overlay"></div><!-- ./overlay -->
+    <div class="side-nav">
+        <ul class="user-control-list">
+            <ul id="sm-log">
+                <li><a href="logIn.html">sign in</a></li>
+                <li><a href="signUp.html">sign up</a></li>
+            </ul><!-- #/log -->
+            <ul id="sm-userLink" class="userLink">
+                <li>
+                    <a href="userPage.html" class="username">USER PAGE</a>
+
+                </li>
+                <li><a id="sm-logOut">log out</a></li>
+            </ul><!-- #/userLink -->
+            <li><a href="#">faqs</a></li>
+            <li class="dropdown">usd <i class="fas fa-chevron-down"></i>
+                <ul class="menu">
+                    <li>usd</li>
+                    <li>eur</li>
+                </ul>
+            </li><!-- ./dropdown -->
+        </ul><!-- ./user-options-list -->
+        <ul class="user-options-list">
+            <li class="searchIcon"><img src="images/Icons/search.png" alt=""></li>
+            <li><a href="favourite.html"><img src="images/Icons/heart.png" alt=""></a></li>
+            <li><a href="cart.html"><img src="images/Icons/cart.png" alt=""><span id="sm-cart-price">$0.00</span></a>
+            </li>
+        </ul><!-- ./user-options-list -->
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-list-item ">home</a></li>
+            <li><a href="shop.html" class="nav-list-item ">shop</a></li>
+            <li><a href="about.html" class="nav-list-item active">about us</a></li>
+            <li class="dropdown">
+                <a href="blog.html" class="nav-list-item">blog</a>
+                <ul class="menu">
+                    <li><a href="#" class="nav-menu-item">blog details</a></li>
+                </ul><!-- ./menu -->
+            </li><!-- ./dropdown -->
+            <li><a href="contact.html" class="nav-list-item">contact</a></li>
+        </ul><!-- ./nav-list -->
+        <p>Free shipping, 30-day return or refund guarantee.</p>
+
+    </div><!-- ./side-nav -->
+    <div class="overlay2"></div>
+    <form action="#" class="search-form">
+        <input type="text" placeholder="Search here...." id="searchInput" />
+        <button type="submit">Seach</button>
+        <span class="closeIcon2">X</span>
+    </form><!-- ./search-form -->
+    <div class="massage">
+        <span class="closeIcon">X</span>
+        <p></p>
+    </div><!-- ./massage -->
+    <div class="preloader-bg">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div><!-- ./preloader-bg -->
+    <main>
+        <section class="breadCrumb">
+            <div class="container">
+                <h4 class="breadCrumb-title mb-2">About Us</h4>
+                <a href="index.html">home</a>
+                <span>About Us</span>
+            </div><!-- ./container -->
+        </section><!-- ./breadCrumb -->
+        <section class="about padd">
+            <div class="container">
+                <div class="about-img mb-5"><img src="images/About/about-us.jpg.webp" alt=""></div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="about-item mb-4">
+                            <h4 class="about-item-title mb-2">Who We Are ?</h4>
+                            <p class="about-item-desc">Contextual advertising programs sometimes have strict policies
+                                that need to be adhered too.
+                                Let’s take Google as an example.</p>
+                        </div><!-- ./about-item -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="about-item mb-4">
+                            <h4 class="about-item-title mb-2">Who We Do ?</h4>
+                            <p class="about-item-desc">A two or three storey house is the ideal way to maximise the
+                                piece of earth on which our home
+                                sits, but for older or infirm people.</p>
+                        </div><!-- ./about-item -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-12">
+                        <div class="about-item mb-4">
+                            <h4 class="about-item-title mb-2">Why Choose Us</h4>
+                            <p class="about-item-desc">In this digital generation where information can be easily
+                                obtained within seconds, business
+                                cards still have retained their importance.</p>
+                        </div><!-- ./about-item -->
+                    </div>
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </section><!-- ./about -->
+
+        <section class="testimonial">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="testimonial-item">
+                        <div class="testimonial-item-content">
+                            <span class="testimonial-item-qoute mb-3"><i class="fas fa-quote-right"></i></span>
+                            <p class="testimonial-item-desc mb-3">“Going out after work? Take your butane curling iron
+                                with
+                                you to the office, heat it up,
+                                style your hair before you leave the office and you won’t have to make a trip back
+                                home.”</p>
+                            <div class="testimonial-item-auther">
+                                <img src="images/About/testimonial-author.jpg.webp" alt="">
+                                <h5 class="title mb=3">Augusta Schultz</h5>
+                                <span class="subtitle">Fashion Design</span>
+                            </div><!-- c   ./testimonial-item-auther -->
+                        </div><!-- ./testimonial-item content -->
+                    </div><!-- ./testimonial-item -->
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="testimonial-img"><img src="images/About/testimonial-pic.jpg.webp" alt=""></div>
+                    <!-- ./testimonial-img -->
+                </div>
+            </div><!-- ./row -->
+        </section><!-- ./testimonial -->
+
+        <section class="counter">
+            <div class="container">
+                <div class="counter-content padd">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="counter-item text-center">
+                                <h2 class="counter-item-number  h1 ">102</h2>
+                                <!-- <span class="mb-3 h1">K</span> -->
+
+                                <h5 class="counter-item-title text-capitalize">our <br>clints</h5>
+                            </div><!-- counter-item -->
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="counter-item text-center">
+                                <h2 class="counter-item-number h1 ">30</h2>
+                                <!-- <span class="mb-3 h1">K</span> -->
+
+                                <h5 class="counter-item-title text-capitalize">Total<br> Categories</h5>
+                            </div><!-- counter-item -->
+                        </div>
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="counter-item text-center">
+                                <h2 class="counter-item-number  h1 ">102</h2>
+                                <!-- <span class="mb-3 h1">K</span> -->
+
+                                <h5 class="counter-item-title text-capitalize">in <br>country</h5>
+                            </div><!-- counter-item -->
+                        </div><!-- ./row -->
+                        <div class="col-lg-3 col-sm-6 col-12">
+                            <div class="counter-item text-center">
+                                <h2 class="counter-item-number  h1 ">98</h2>
+                                <span class=" h1">%</span>
+
+                                <h5 class="counter-item-title text-capitalize">Happy <br>Customer</h5>
+                            </div><!-- counter-item -->
+                        </div>
+                    </div><!-- ./row -->
+                </div><!-- ./counter-content -->
+            </div><!-- ./container -->
+        </section><!-- ./counter -->
+
+        <section class="team padd ">
+            <div class="container">
+                <div class="headerSection mb-5">
+                    <span>our team</span>
+                    <h2>meet our team</h2>
+                </div><!-- ./headerSection -->
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <img src="images/About/team-1.jpg.webp" class="w-100" alt="">
+                        <h4 class="team-title mt-4">John Smith</h4>
+                        <span class="team-work mt-1">Fashion Design</span>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <img src="images/About/team-2.jpg.webp" class="w-100" alt="">
+                        <h4 class="team-title mt-4">Christine Wise</h4>
+                        <span class="team-work mt-1">C.E.O</span>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <img src="images/About/team-3.jpg.webp" class="w-100" alt="">
+                        <h4 class="team-title mt-4">Sean Robbins</h4>
+                        <span class="team-work mt-1">Manager</span>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-12">
+                        <img src="images/About/team-4.jpg.webp" class="w-100" alt="">
+                        <h4 class="team-title mt-4">Lucy Myers</h4>
+                        <span class="team-work mt-1">Delivery</span>
+                    </div>
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </section><!-- ./team -->
+
+        <section class="partner padd">
+            <div class="container">
+                <div class="headerSection mb-5">
+                    <span>partner</span>
+                    <h2>happy clints</h2>
+                </div><!-- ./headerSection -->
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-1.png.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-8.png.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-3.png.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-4.png.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-5.png.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-6.png.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-7.png.webp" alt="">
+                    </div>
+                    <div class="col-lg-3 col-sm-6 mb-5 col-12">
+                        <img src="images/About/client-8.png.webp" alt="">
+                    </div>
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </section><!-- ./partner -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="top-content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-5 col-12">
+                            <div class="footer-item">
+                                <div class="logo mb-4"><img src="images/Logos/footer-logo.png" alt=""></div>
+                                <p class="footer-item-desc mb-5">The customer is at the heart of our unique business
+                                    model,
+                                    which
+                                    includes design.</p>
+                                <a href="#"><img src="images/Logos/payment.png" alt=""></a>
+                            </div><!-- ./footer-item -->
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 mb-5 col-12 offset-lg-1">
+                            <h6 class="footer-item-title mb-4">shopping</h6>
+                            <ul class="footer-list">
+                                <li><a href="#">Clothing Store</a></li>
+                                <li><a href="#">Trending Shoes</a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul><!-- ./footer-list -->
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 mb-5 col-12">
+                            <h6 class="footer-item-title mb-4">shopping</h6>
+                            <ul class="footer-list">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Payment Methods</a></li>
+                                <li><a href="#">Delivary</a></li>
+                                <li><a href="#">Return &amp; Exchanges</a></li>
+                            </ul><!-- ./footer-list -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5 offset-lg-1">
+                            <div class="footer-item">
+                                <h6 class="footer-item-title mb-4">newletter</h6>
+                                <p class="footer-item-desc mb-5">Be the first to know about new arrivals, look books,
+                                    sales & promos!</p>
+                                <form action="#" class="footer-form">
+                                    <input type="text" placeholder="Your email">
+                                    <button type="submit"><span></span></button>
+                                </form>
+                            </div><!-- ./footer-item -->
+                        </div>
+                    </div><!-- ./row -->
+                </div><!-- ./top-content -->
+                <div class="bottom-content">
+                    <p>Copyright © 20212020 All rights reserved | This template is designed with <i
+                            class="far fa-heart"></i> by <span>Colorlib</span></p>
+                    <p>And Developed by <span>Abdallah Elrhmany</span></p>
+                </div><!-- ./bottom-content -->
+            </div><!-- ./container -->
+        </footer>
+    </main>
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.js"></script>
+    <script src="js/overlayFunctions.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>

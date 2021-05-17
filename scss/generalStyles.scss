@@ -1,0 +1,166 @@
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+/* 2-General Style  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    line-height: 1.5;
+}
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    color: $col-black;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: bolder !important;
+}
+h2{
+    font-size: $mainFontSize * 2.25;
+    text-transform: capitalize;
+}
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style: none;
+    margin-bottom: 0;
+}
+.clear{
+    clear: both;
+}
+p{
+    margin-bottom: 0;
+}
+.padd{
+    padding: 100px 0;
+}
+main{
+    margin-top: 128px;
+}
+/* shop btn style */
+.shop-btn{
+    font-size: $mainFontSize - 3;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 30px;
+    color: $col-whi;
+    background-color: $col-black;
+    letter-spacing: 4px;
+}
+.shop-btn{
+    &:hover{
+        color: $col-whi;
+        background-color: $col-black;
+    }
+}
+
+/* overlay style */
+.overlay{
+    display: none;
+    position: fixed;
+    @include Dir(0, 0 ,0 ,0 );
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 8;
+}
+.overlay2{
+    display: none;
+    position: fixed;
+    @include Dir(0, 0 ,0 ,0 );
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 11;
+}
+@include MdMore{
+    .side-nav{
+        display: none !important;
+    }
+}
+/* search style */
+.search-form{
+    display: none;
+    position: fixed;
+    @include Dirtl(40%,50% );
+    width: 80%;
+    @include TranslatXY(-50%, -50%);
+    text-align: $textCenter;
+    z-index: 10;
+}
+.search-form {
+    height: 180px;
+    z-index: 12;
+    input[type="text"]{
+        @include heroImg;
+        width: 80%;
+        font-size: $mainFontSize * 2.5;
+        border-bottom: 2px solid #333;
+        background:rgba(0,0, 0, .5);
+        color: rgb(206, 206, 206);
+        border: none;
+        outline: 0;
+    }
+    button{
+        @extend %cart-btn;
+        border: none;
+        outline: 0;
+        @include heroImg;
+        top: 75% !important;
+    }
+}
+
+// search media
+
+@include Sm{
+    main{
+        margin-top: 65px;
+    }
+    .search-form {
+        height: 250px;
+        input[type="text"]{
+            font-size: $mainFontSize;
+        }
+    }
+}
+.closeIcon, .closeIcon2{
+    position: absolute;
+    @include Dirtr(0%, 0px);
+    font-size: $mainFontSize * 2;
+    color: #ccc;
+    cursor: pointer;
+    font-weight: bold;
+}
+.border-hover{
+    font-size: $mainFontSize - 3;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    padding: 6px 0;
+    &::after{
+        content: '';
+        position: absolute;
+        @include Dirbl(0 , 0 );
+        @include WidHei(40%, 2px);
+        background-color: $main-col;
+        @include Transition();
+    }
+}
+.massage{
+    @include heroImg;
+    position: fixed;
+    background-color: $col-whi;
+    @include WidHei(80%, 85vh);
+    display: none;
+    z-index: 100;
+    .closeIcon{
+        right: 15px !important;
+    }
+    p{
+        text-align: $textCenter;
+        width: 75%;
+        font-size: $mainFontSize + 4; 
+        @include heroImg;
+    }
+}

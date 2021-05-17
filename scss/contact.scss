@@ -1,0 +1,44 @@
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+
+// 3.8-contact page
+//         3.8.1 map Section
+
+
+
+//         3.8.2 contact Section
+
+.contact{
+    .contact-info{
+        p{
+            color: #707070;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .headerSection{
+            span{
+                @extend %sectionHeaderSubtitle;
+            }
+        }
+    }
+    .contact-form{
+        .contact-input{
+            @extend %contactInput;
+        }
+        .textarea{
+            height: 150px;
+        }
+        .contact-btn{
+            @extend %cart-btn;
+            margin-top: 0;
+            outline: 0;
+            border: 0;
+            background-color: $col-black;
+            color: $col-whi;
+            letter-spacing: 3px;
+            padding: 15px 50px;
+        }
+    }
+}

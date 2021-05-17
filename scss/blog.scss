@@ -1,0 +1,20 @@
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+
+
+// 3.9-blog page
+// 3.9.1 blog-bg Section
+
+.blog-bg{
+    text-align: center;
+    background-image: url(../images/Blog/breadcrumb-bg.jpg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 135px 0;
+    .blog-bg-title{
+        font-size: $mainFontSize * 3.6;
+        color: $col-whi;
+    }
+}

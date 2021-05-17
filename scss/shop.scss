@@ -1,0 +1,124 @@
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+
+
+// 3.2-shop page 
+
+// 3.2.1 products Section
+.products{
+    .filters{
+        .product-search{
+            position: relative;
+            color: $col-whi-dd;
+            input{
+                color: $col-whi-d;
+                @extend %formInput;
+                border: 1px solid $col-whi-dd;
+                padding: 10px 20px;
+            }
+            button{
+                @extend %inputBtnIn;
+                span{
+                    &::before{
+                        content: "\f002";
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .all_filters{
+            user-select: none;
+            .categories{
+                font-weight: 700;
+                text-transform: uppercase;
+                display: block;
+                cursor: pointer;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content: "\f078";
+                    font-family: "Font Awesome 5 Free";
+                    @include Dirtr(-1px, 0);
+                }
+            }
+            .filter-list{
+                padding: 15px 0;
+                border-bottom: 1px solid $col-whi-dd;
+                &:last-of-type{
+                    border-bottom:none;
+                }
+                li{
+                    display: block;
+                    button{
+                        @include WidHei(100%, 100%);
+                        text-align: $textLeft;
+                        background: none;
+                        border: 0;
+                        outline: 0;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        color: $col-whi-d;
+                        font-size: $mainFontSize - 1;
+                        line-height: 2;
+                        cursor: pointer;
+                        @include Transition;
+                        &:hover, &.active{
+                            color: $col-black;
+                        }
+                        
+                    }
+                }
+            }
+            
+            .filter-list.size-list{
+                li{
+                    @extend %sizeFilterli;
+                    padding: 0;
+                    min-width: 60px;
+                    button{
+                        text-align: center;
+                        &.active{
+                            background-color: $col-black;
+                            color: $col-whi;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .productsUI{
+        padding-left: 25px;
+        .top-price-filter{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p{
+                display: inline;
+            }
+            .nice-select {
+                margin-top: 1px;
+                font-size: $mainFontSize ;
+                text-transform: capitalize;
+                font-weight: bold;
+                padding: 0 10px;
+                line-height: 26px;
+                height: auto;
+                border: none;
+                padding-right: 25px;
+            }
+        }
+        .product{
+            @extend %productStyle;
+        }
+    }
+}
+
+// products media
+
+@include Sm{
+    .productsUI{
+        padding-left: 0 !important;
+    }
+}

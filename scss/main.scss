@@ -1,0 +1,406 @@
+/*
+  1-Common Styles
+  2-General Style
+  3-Pages
+    3.0-Common Sections
+        3.0.1 header section
+        3.0.2 breadCrumb section
+        3.0.3 footer Section
+        3.0.4 blog Section 
+    3.1-home page    
+        3.1.1 banner Section 
+        3.1.2 brand Section 
+        3.1.3 products Sections
+        3.1.4 offer Section 
+        3.1.5 instaram Section
+    3.2-shop page
+        3.2.1 products Section
+    3.3-signup/login pages
+        3.3.1 sign Section
+    3.4-cart page
+        3.4.1 cartList Section
+    3.5-ProductDetails page
+        3.5.1 product-preview Section 
+        3.5.2 details Section 
+        3.5.3 product-info Section 
+    3.6-favourite page
+        3.6.1 favouritePro Section  
+    3.7-about page
+        3.7.1 about Section  
+        3.7.2 testimonial Section  
+        3.7.3 counter Section  
+        3.7.4 team Section  
+        3.7.5 partner Section  
+    3.8-contact page
+        3.8.1 map Section
+        3.8.2 contact Section
+    3.9-blog page
+        3.9.1 blog-bg Section
+    3.10-check out page
+        3.10.1 checkOut Section
+*/
+
+/* 1-Common Styles */
+/*
+    -colors
+    -shop-btn
+    -cart-btn
+    -overlay
+    -search
+    -border hover
+    -section header
+    -section padding
+    -description style
+    -massage style
+*/
+
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+
+
+// 3.1-home page 
+
+/* 3.1.1 banner section */
+.owl-carousel{
+    .owl-stage{
+       padding: 0 !important;
+    }
+    .item{
+        .banner-img{
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            @include WidHei(100%, 800px);
+            background-image: url(../images/Banner/hero-1.jpg);
+            .banner-info{
+                @include TranslatY(220px);
+                position: relative;
+                .banner-subtitle{
+                    @extend %bannercommon;
+                    @extend %sectionHeaderSubtitle;
+                }
+                .banner-title{
+                    @extend %bannercommon;
+                    font-size: $mainFontSize * 3;
+                    font-weight: 700;
+                    margin-bottom: 30px;   
+                }
+                .banner-desc{
+                    @extend %bannercommon;
+                    line-height: 1.7;
+                    margin-bottom: 35px;
+                    
+                }
+                .banner-link{
+                    @extend %bannercommon;
+                    i{
+                        font-size: $mainFontSize + 4;
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+                .banner-social{
+                    @include TranslatY(200px);
+                    li{
+                        display: inline-block;
+                        margin-right: 30px;
+                        font-size: $mainFontSize - 2;
+                    }
+                }
+            }
+        }
+        .banner-img.two{
+            background-image: url(../images/Banner/hero-2.jpg);
+        } 
+    }
+    .owl-nav{
+        position: absolute;
+        top: 45%;
+        width: 100%;
+        @include TranslatY(-50%);
+        button{
+            font-size: $mainFontSize * 1.875 !important;
+            margin-top: -18px;
+            line-height: 29px;
+        }
+        .owl-next{
+            left: 1%;
+            @extend %owlBtn;
+        }
+        .owl-prev{
+            right: 1%;
+            @extend %owlBtn;
+        }
+    }
+    .owl-nav [class*=owl-]:hover{
+        background:none;
+        color: inherit;
+    }
+}
+.owl-carousel.owl-drag{
+    .owl-item.active{
+        .banner-info{
+            .banner-subtitle{
+                @extend %owlActiveItem;
+            }
+            .banner-title{
+                @extend %owlActiveItem;
+            }
+            .banner-desc{
+                @extend %owlActiveItem;
+            }
+            .banner-link{
+                @extend %owlActiveItem;
+            }
+        }
+    }
+}
+
+/* banner media */
+
+@include Sm{
+    .owl-nav{
+        @include Dirtl(81%,-45% );
+    }
+    .owl-prev{
+        right: unset !important;
+        margin: 5px 50px !important; 
+    }
+    .owl-next{
+         left: unset !important;
+    }
+}
+
+
+/* 3.1.2 brand section  */
+
+.brand{
+    padding-bottom: 0;
+    .row{
+        .brand-item{
+            position: relative;
+            margin-bottom: 20px;
+            .brand-item-img img{
+                width: 100%;
+            }
+            
+            .brand-item-title{
+                font-weight: 700;
+                line-height: 46px;
+                margin-bottom: 10px;
+            }
+            &:hover .border-hover{
+                &::after{
+                    width: 100%;
+                    background-color: $col-black;
+                }
+            }
+        }
+        .brand-item:nth-of-type(2){
+            .brand-item-info{
+                position: static;
+            }
+        } 
+        .brand-item:last-of-type{
+            .brand-item-info:last-of-type{
+                left: -150px;
+                @extend %brandCommon;
+            }
+        } 
+    }
+    .row:first-of-type{
+        .brand-item:first-of-type{
+            .brand-item-info{
+                @extend %brandCommon;
+            } 
+        }
+    }
+    .row:last-of-type{
+        .brand-item:first-of-type{
+            margin-top: -100px;
+        }
+    }
+}
+
+// brand media
+
+@include Md{
+    .row:last-of-type .brand-item:first-of-type{
+        margin-top: 0 !important;
+    }
+    .brand-item:last-of-type .brand-item-info:last-of-type{
+        left: -190px;
+    }
+}
+
+@include Sm{
+    .brand-item .brand-item-info{
+        position: static !important;
+        margin-bottom: 30px;
+        max-width: none !important;
+    }
+}
+
+/*     3.1.3 products Section */
+.products{
+    .products-list{
+        text-align: $textCenter;
+        button{
+            background: none;
+            border: none;
+            outline: none;
+            color: $col-whi-d;
+            li{
+                display: inline-block;
+                text-transform: capitalize;
+                margin: 0 40px;
+                font-size: $mainFontSize * 1.5;
+                cursor: pointer;
+                font-weight: bold;
+            }
+            &.active{
+                color: $col-black;
+            }
+        }
+    }
+
+    .product{
+        @extend %productStyle;
+    }
+}
+
+// products media
+
+@include Sm{
+    .products-list{
+        li{
+            margin: 0 10px !important;
+        }
+    }
+}
+
+/*     3.1.4 offer Section */
+
+.offer{
+    background-color: $col-whi-dd;
+    .offer-info{
+        position: relative;
+        z-index: 1;
+        padding: 40px 0;
+        &::before{
+            position: absolute;
+            @include Dirtl(0px, -485px);
+            @include WidHei(600px, 300px);
+            background: #ffffff;
+            z-index: -1;
+            content: "";
+        }
+        .info-list {
+            li{
+                color: $col-whi-d;
+                line-height: 72px;
+                font-size: $mainFontSize * 2.125;
+                &:nth-of-type(2){
+                    color: $col-black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    .offer-img{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .offer-price{
+            position: absolute;
+            @include Dirtr(-25px, 25px);
+            @include WidHei(100px, 100px);
+            background-color: $col-black;
+            @include borderR(50%);
+            color: $col-whi;
+            text-align: $textCenter;
+            text-transform: capitalize;
+            line-height: 50px;
+        }
+    }
+    .offer-time{
+        .offer-subtitle{
+            @extend %sectionHeaderSubtitle;
+        }
+    }
+    .countdown{
+        display: flex;
+        justify-content: space-between;
+        text-align: $textCenter;
+        .countdown-item{
+            position: relative;
+            width: 25%;
+            h2{
+                margin-bottom: 20px;
+            }
+            &:not(.last):after{
+                position: absolute;
+                content: ":";
+                font-size: $mainFontSize * 2.5 !important;
+                @include Dirtr(7px, 0);
+            }
+            p{
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+/*     3.1.5 instaram Section */
+
+.instagram{
+    padding-bottom: 0;
+    .insta_pic{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @each $bg in $instagrambg {
+            .#{$bg}{
+                background: url(../images/Instagram/#{$bg}.jpg) no-repeat center;
+            }
+        }
+        .picture{
+            @include WidHei(100%, 261px);
+            background-size: cover;
+        }
+    }
+    .instagram-text{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        .instagram-desc{
+            font-size: $mainFontSize - 1;
+            color: $col-black-1;
+            line-height: 1.6;
+        }
+        .male_fashion{
+            color: $main-col;
+        }
+    }
+}
+
+// instaram media
+
+@include Sm{
+    .insta_pic{
+        grid-template-columns: repeat(2, 1fr) !important;
+        margin-bottom: 70px;
+    }
+}
+@include Xs{
+    .insta_pic{
+        grid-template-columns: repeat(1, 1fr) !important;
+        margin-bottom: 70px;
+    }
+}
+
+

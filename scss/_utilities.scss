@@ -1,0 +1,81 @@
+$col-black : #111111;
+$col-black-1 : #3d3d3d;
+$main-col: #e53637;
+$col-whi : #fff;
+$col-whi-d : #b7b7b7;
+$col-whi-dd : #f3f2ee;
+$mainFontSize: 16px;
+$textCenter: center;
+$textLeft: left;
+$textRight: right;
+
+@mixin Transition {
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+}
+@mixin TranslatY($y) {
+    transform: translateY($y);
+    -webkit-transform: translateY($y);
+    -moz-transform: translateY($y);
+    -ms-transform: translateY($y);
+    -o-transform: translateY($y);
+}
+@mixin TranslatXY($x ,$y) {
+    transform: translate($x ,$y);
+    -webkit-transform: translate($x ,$y);
+    -moz-transform: translate($x ,$y);
+    -ms-transform: translate($x ,$y);
+    -o-transform: translate($x ,$y);
+}
+@mixin Dir($t, $r, $b, $l) {
+    top: $t !important;
+    right: $r !important;
+    bottom: $b !important;
+    left: $l !important;
+}
+@mixin Dirtr($t, $r) {
+    top: $t !important;
+    right: $r !important;
+}
+@mixin Dirtb($t, $b) {
+    top: $t !important;
+    bottom: $b !important;
+}
+@mixin Dirtl($t, $l) {
+    top: $t !important;
+    left: $l !important;
+}
+@mixin Dirrb( $r, $b) {
+    right: $r !important;
+    bottom: $b !important;
+}
+@mixin Dirrl( $r, $l) {
+    right: $r !important;
+    left: $l !important;
+}
+@mixin Dirbl( $b, $l) {
+    bottom: $b !important;
+    left: $l !important;
+}
+@mixin heroImg{
+    position: absolute;
+    @include Dirtl(50%, 50%);
+    @include TranslatXY(-50%, -50%);
+}
+@mixin borderR ($r){
+    border-radius: $r;
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    -ms-border-radius: $r;
+    -o-border-radius: $r;
+}
+@mixin WidHei($w, $h){
+    width: $w;
+    height: $h;
+}
+
+$instagrambg : instagram-1 instagram-2 instagram-3 instagram-4 instagram-5 instagram-6;
+

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Icons/icon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./style/nice-select.css" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style/preLoader.css" />
+    <link rel="stylesheet" href="./style/generalStyles.css" />
+    <link rel="stylesheet" href="./style/commonSections.css" />
+    <link rel="stylesheet" href="./style/shop.css" />
+    <title>Male-Fashion | Shop</title>
+</head>
+
+<body>
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <p>Free shipping, 30-day return or refund guarantee.</p>
+                <ul class="user-control-list">
+                    <ul id="log">
+                        <li><a href="logIn.html">sign in</a></li>
+                        <li><a href="signUp.html">sign up</a></li>
+                    </ul><!-- #/log -->
+                    <ul id="userLink">
+                        <li>
+                            <a href="userPage.html" class="username">user page</a>
+
+                        </li>
+                        <li><a id="logOut">log out</a></li>
+                    </ul><!-- #/userLink -->
+                    <li><a href="#">faqs</a></li>
+                    <li class="dropdown">usd <i class="fas fa-chevron-down"></i>
+                        <ul class="menu">
+                            <li>usd</li>
+                            <li>eur</li>
+                        </ul>
+                    </li><!-- ./dropdown -->
+                </ul><!-- ./user-options-list -->
+            </div><!-- ./container -->
+        </div><!-- ./top-header -->
+        <div class="container">
+            <div class="row">
+                <div class="logo col-lg-3 col-md-3">
+                    <h1><a href="index.html"><img src="images/Logos/logo.png" alt="Logo"></a></h1>
+                </div><!-- ./logo -->
+                <nav class="col-lg-6 col-md-6">
+                    <!-- The Nav Bar At md Devices -->
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-list-item">home</a></li>
+                        <li><a href="shop.html" class="nav-list-item active">shop</a></li>
+                        <li><a href="about.html" class="nav-list-item">about us</a></li>
+                        <li class="dropdown">
+                            <a href="blog.html" class="nav-list-item">blog</a>
+                            <ul class="menu">
+                                <li><a href="#" class="nav-menu-item">blog details</a></li>
+                            </ul><!-- ./menu -->
+                        </li><!-- ./dropdown -->
+                        <li><a href="contact.html" class="nav-list-item">contact</a></li>
+                    </ul><!-- ./nav-list -->
+                </nav>
+                <div class="user-options col-lg-3 col-md-3">
+                    <ul class="user-options-list">
+                        <li id="searchIcon"><img src="images/Icons/search.png" alt=""></li>
+                        <li><a href="favourite.html"><img src="images/Icons/heart.png" alt=""></a></li>
+                        <li class="shoppingCart">
+                            <img src="images/Icons/cart.png" alt=""><span id="cart-price">$0.00</span>
+                        </li><!-- ./shoppingCart -->
+                        <div class="shoppingMenu">
+                            <p></p>
+                            <a href="cart.html" class="shop-btn">view all products</a>
+                        </div>
+                    </ul><!-- ./user-options-list -->
+                </div><!-- ./user-options -->
+            </div><!-- ./row -->
+            <div class="small-nav-icon">
+                <i class="fas fa-bars"></i>
+            </div><!-- ./small-nav-icon -->
+        </div><!-- ./container -->
+    </header>
+    <div class="overlay"></div><!-- ./overlay -->
+    <div class="side-nav">
+        <ul class="user-control-list">
+            <ul id="sm-log">
+                <li><a href="logIn.html">sign in</a></li>
+                <li><a href="signUp.html">sign up</a></li>
+            </ul><!-- #/log -->
+            <ul id="sm-userLink" class="userLink">
+                <li>
+                    <a href="userPage.html" class="username">USER PAGE</a>
+
+                </li>
+                <li><a id="sm-logOut">log out</a></li>
+            </ul><!-- #/userLink -->
+            <li><a href="#">faqs</a></li>
+            <li class="dropdown">usd <i class="fas fa-chevron-down"></i>
+                <ul class="menu">
+                    <li>usd</li>
+                    <li>eur</li>
+                </ul>
+            </li><!-- ./dropdown -->
+        </ul><!-- ./user-options-list -->
+        <ul class="user-options-list">
+            <li class="searchIcon"><img src="images/Icons/search.png" alt=""></li>
+            <li><a href="favourite.html"><img src="images/Icons/heart.png" alt=""></a></li>
+            <li><a href="cart.html"><img src="images/Icons/cart.png" alt=""><span id="sm-cart-price">$0.00</span></a>
+            </li>
+        </ul><!-- ./user-options-list -->
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-list-item ">home</a></li>
+            <li><a href="shop.html" class="nav-list-item active">shop</a></li>
+            <li><a href="about.html" class="nav-list-item">about us</a></li>
+            <li class="dropdown">
+                <a href="blog.html" class="nav-list-item">blog</a>
+                <ul class="menu">
+                    <li><a href="#" class="nav-menu-item">blog details</a></li>
+                </ul><!-- ./menu -->
+            </li><!-- ./dropdown -->
+            <li><a href="contact.html" class="nav-list-item">contact</a></li>
+        </ul><!-- ./nav-list -->
+        <p>Free shipping, 30-day return or refund guarantee.</p>
+
+    </div><!-- ./side-nav -->
+    <div class="overlay2"></div>
+    <form action="#" class="search-form">
+        <input type="text" placeholder="Search here...." id="searchInput" />
+        <button type="submit">Seach</button>
+        <span class="closeIcon2">X</span>
+    </form><!-- ./search-form -->
+    <div class="massage">
+        <span class="closeIcon">X</span>
+        <p></p>
+    </div><!-- ./massage -->
+    <div class="preloader-bg">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div><!-- ./preloader-bg -->
+    <main>
+        <section class="breadCrumb">
+            <div class="container">
+                <h4 class="breadCrumb-title mb-2">Shop</h4>
+                <a href="index.html">home</a>
+                <span>Shop</span>
+            </div><!-- ./container -->
+        </section><!-- ./breadCrumb -->
+        <section class="products padd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12">
+                        <aside class="filters mb-5">
+                            <form action="#" class="product-search mb-5">
+                                <input type="text" id="searInput" placeholder="Search...">
+                                <button type="submit"><span></span></button>
+                            </form><!-- ./product-search -->
+                            <ul class="all_filters">
+                                <li class="categories first">Categories</li>
+                                <ul class="filter-list" id="cate-list">
+                                    <li><button type="button" class="active" data-category-filter="all">all</button>
+                                    </li>
+                                    <li><button type="button" data-category-filter="men">men</button></li>
+                                    <li><button type="button" data-category-filter="woman">woman</button></li>
+                                    <li><button type="button" data-category-filter="bags">bags</button></li>
+                                    <li><button type="button" data-category-filter="clothing">clothing</button></li>
+                                    <li><button type="button" data-category-filter="shoes">Shoes</button></li>
+                                    <li><button type="button" data-category-filter="accessories">Accessories</button>
+                                    </li>
+                                    <li><button type="button" data-category-filter="kids">kids</button></li>
+                                </ul><!-- ./filter-list -->
+                                <li class="categories mt-3">branding</li>
+                                <ul class="filter-list" id="brand-list">
+                                    <li><button type="button" class="active" data-brand-filter="all">all</button></li>
+                                    <li><button type="button" data-brand-filter="louis">Louis Vuitton</button></li>
+                                    <li><button type="button" data-brand-filter="chanel">Chanel</button></li>
+                                    <li><button type="button" data-brand-filter="hermes">Hermes</button></li>
+                                    <li><button type="button" data-brand-filter="gucci">Gucci</button></li>
+                                    <!-- <li>Louis Vuitton</li>
+                                    <li>Chanel</li>
+                                    <li>Hermes</li>
+                                    <li>Gucci</li> -->
+                                </ul><!-- ./filter-list -->
+                                <li class="categories mt-3">filter price</li>
+                                <ul class="filter-list active" id="price-list">
+                                    <li><button type="button" class="active" data-price-filter="0"
+                                            data-price-filter-end=100000>all</button></li>
+                                    <li><button type="button" data-price-filter=0 data-price-filter-end=50>$0.00 -
+                                            $50.00</button></li>
+                                    <li><button type="button" data-price-filter=50 data-price-filter-end=100>$50.00
+                                            -
+                                            $100.00</button></li>
+                                    <li><button type="button" data-price-filter=100 data-price-filter-end=150>$100.00 -
+                                            $150.00</button></li>
+                                    <li><button type="button" data-price-filter=150
+                                            data-price-filter-end=100000>150.00+</button></li>
+                                </ul><!-- ./filter-list -->
+                                <li class="categories mt-3">size</li>
+                                <ul class="filter-list size-list active" id="size-list">
+                                    <li><button type="button" class="active" data-size-filter="all">all</button></li>
+                                    <li><button type="button" data-size-filter="xs">xs</button></li>
+                                    <li><button type="button" data-size-filter="s">s</button></li>
+                                    <li><button type=" button" data-size-filter="l">l</button></li>
+                                    <li><button type=" button" data-size-filter="m">m</button></li>
+                                    <li><button type=" button" data-size-filter="xl">xl</button></li>
+                                    <li><button type=" button" data-size-filter="2xl">2xl</button></li>
+                                    <li><button type=" button" data-size-filter="3xl">3xl</button></li>
+                                </ul><!-- ./filter-list -->
+                            </ul><!-- ./all_filters -->
+                        </aside><!-- ./filters -->
+                    </div><!-- ./col-lg-3 col-12 -->
+                    <div class=" col-lg-9 col-12">
+                        <div class="productsUI">
+                            <div class="row content">
+
+                            </div><!-- ./row -->
+                            <!-- </div> -->
+                        </div><!-- ./productsUI -->
+                    </div><!-- ./col-lg-9 col-12 -->
+                </div><!-- ./row -->
+            </div><!-- ./container -->
+        </section><!-- ./products -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="top-content">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 mb-5 col-12">
+                            <div class="footer-item">
+                                <div class="logo mb-4"><img src="images/Logos/footer-logo.png" alt=""></div>
+                                <p class="footer-item-desc mb-5">The customer is at the heart of our unique business
+                                    model,
+                                    which
+                                    includes design.</p>
+                                <a href="#"><img src="images/Logos/payment.png" alt=""></a>
+                            </div><!-- ./footer-item -->
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 mb-5 col-12 offset-lg-1">
+                            <h6 class="footer-item-title mb-4">shopping</h6>
+                            <ul class="footer-list">
+                                <li><a href="#">Clothing Store</a></li>
+                                <li><a href="#">Trending Shoes</a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Sale</a></li>
+                            </ul><!-- ./footer-list -->
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 mb-5 col-12">
+                            <h6 class="footer-item-title mb-4">shopping</h6>
+                            <ul class="footer-list">
+                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#">Payment Methods</a></li>
+                                <li><a href="#">Delivary</a></li>
+                                <li><a href="#">Return &amp; Exchanges</a></li>
+                            </ul><!-- ./footer-list -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5 offset-lg-1">
+                            <div class="footer-item">
+                                <h6 class="footer-item-title mb-4">newletter</h6>
+                                <p class="footer-item-desc mb-5">Be the first to know about new arrivals, look books,
+                                    sales & promos!</p>
+                                <form action="#" class="footer-form">
+                                    <input type="text" placeholder="Your email">
+                                    <button type="submit"><span></span></button>
+                                </form>
+                            </div><!-- ./footer-item -->
+                        </div>
+                    </div><!-- ./row -->
+                </div><!-- ./top-content -->
+                <div class="bottom-content">
+                    <p>Copyright © 20212020 All rights reserved | This template is designed with <i
+                            class="far fa-heart"></i> by <span>Colorlib</span></p>
+                    <p>And Developed by <span>Abdallah Elrhmany</span></p>
+                </div><!-- ./bottom-content -->
+            </div><!-- ./container -->
+        </footer>
+    </main>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/overlayFunctions.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+
+</html>

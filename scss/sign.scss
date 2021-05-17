@@ -1,0 +1,72 @@
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+
+// 3.3-signup/login pages
+
+// 3.3.1 sign Section
+.signPage{
+    padding: 20px 0;
+    .sign{
+        box-shadow:0px 15px 15px 6px #0000001a;
+        max-width: 700px;
+        margin: auto;
+        padding: 50px 60px;
+        text-align: $textCenter;
+        .sign-form{
+            text-align: $textLeft;
+            input{
+                outline: 0;
+                display: block;
+                @include WidHei(100%, 50px);
+                border: 1px solid $col-whi-dd;
+                margin-bottom: 20px;
+                padding: 0 25px;
+                color: #000;
+            }
+            label{
+                display: block;
+                font-size: $mainFontSize + 1;
+                margin-bottom: 6px;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+            div{
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p{
+                    a{
+                        color: $main-col;
+                    }
+                }
+                button{
+                    background: $main-col;
+                    outline: 0;
+                    border: 0;
+                    color: $col-whi;
+                    text-transform: capitalize;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+// sign media
+
+@include Sm{
+    .sign{
+        width: 95%;
+        padding: 40px 30px !important;
+        div{
+            display: block !important;
+            p{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

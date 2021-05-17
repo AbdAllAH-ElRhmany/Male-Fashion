@@ -1,0 +1,131 @@
+
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+// 3.5-ProductDetails page
+
+
+// 3.5.1 product-preview Section
+
+.product-preview{
+    .product-images{
+        background-color: $col-whi-dd;
+        padding: 30px 0;
+        .product-imgs{
+            li{
+                margin: 15px 5px;
+                border: 1px solid $col-whi;
+                @include WidHei(100px, 120px);
+                img{
+                    @include WidHei(100%, 100%);
+                }
+            }
+        }
+    }
+    .preview{
+        img{
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// product-preview media
+
+@include Sm{
+    .product-imgs{
+        text-align: center;
+        li{
+            display: inline-block;
+        }
+    }
+}
+
+
+// 3.5.2 details Section
+
+.details{
+    padding-bottom: 60px;
+    text-align: center;
+    .rating{
+        @extend %rating;
+    } 
+    .size-list{
+        display: inline-block;
+        li{
+            @extend %sizeFilterli;
+        }
+    }
+    .addToCart{
+        max-width: 200px;
+        display: block;
+        margin: auto;
+        @extend %cart-btn;
+        color: $col-whi;
+        background-color: $col-black;
+    }
+    .addToFav{
+        @extend %cart-btn;
+        margin: 0;
+        font-size: $mainFontSize - 3;
+        padding: 14px 3px;
+        margin-top: 3px;
+    }
+    .cate-content{
+        font-size: $mainFontSize - 1;
+        text-transform: capitalize;
+        font-weight: 700;
+        .cate{
+            font-size: $mainFontSize - 1;
+            color: $col-whi-d;
+        }
+    }
+}
+
+
+//         3.5.3 product-info Section 
+
+.product-info{
+    padding-bottom: 60px;
+    .info-title{
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid $col-whi-dd;
+        li{
+            display: inline-block;
+            margin: 0px 20px;
+            cursor: pointer;
+            text-transform: capitalize;
+            font-size: 20px;
+            color: #b7b7b7;
+            padding: 12px 0;
+            font-weight: bold;
+            &.active{
+                border-bottom: 2px solid #e53637 ;
+                opacity: 0;
+                @include Transition;
+                opacity: 1;
+                
+            }
+        }
+    }.info-content{
+        .tab-content{
+            margin-top: 35px;
+            display: none;
+            &.active{
+                display: block;
+            }
+            .content-title{
+                font-size: $mainFontSize + 2;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .content-part{
+                margin-bottom: 30px;
+
+            }
+        }
+
+    }
+}

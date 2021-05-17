@@ -1,0 +1,473 @@
+
+@import 'utilities';
+@import 'media';
+@import 'extended';
+
+/* 3.0 Common Sections */
+
+/* 3.0.1 header section */
+
+header{
+    background-color: $col-whi;
+    position: fixed;
+    @include Dir(0, 0, unset, 0);
+    z-index: 5;
+    .container{
+        position: relative;
+    }
+    .top-header{
+        background-color: $col-black;
+        color: $col-whi !important;
+        padding: 7px 0;
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        p{
+            font-size: $mainFontSize - 1;
+        }
+        .user-control-list {
+            ul{
+                display: inline;
+                li{
+                    @extend %userControlListItem;
+                }
+            }
+            >li{
+                @extend %userControlListItem;
+                &:last-of-type{
+                    margin: 0
+                }
+            }
+            #userLink{
+                display: none
+            }
+            li.dropdown{
+                @extend %userControlLisDropdown;
+                .menu{
+                    box-shadow: 0 10px 20px #0000001a;
+                    @extend %dropdownMenu;
+                    left: -20px;
+                    padding: 0 !important;
+                    background-color: $col-whi !important;
+                    li{
+                        @extend %dropdownMenuItem;
+                        padding: 2px 15px !important;
+                        color: $col-black !important;
+                        font-size: $mainFontSize - 2 !important;
+                    }
+                }
+                &:hover{
+                    .menu{
+
+                        @extend %dropdownMenuHover
+                    }
+                }
+            }
+        }
+        
+    }
+    .logo a{
+        display: inline-block;
+        img{
+            width: 100%;
+        }
+    }
+    nav{
+        .nav-list {
+            text-align: $textCenter;
+            padding: 20px 0;
+            li{
+                display: inline-block;
+                margin-right: 40px;
+                &:last-of-type{
+                    margin-right: 0;
+                }
+                & > .nav-list-item{
+                    @extend %headerListItemStyle;
+                    &::after{
+                        @extend %headerListItemStylAfter;
+                    }
+                }
+                & > .nav-list-item.active{
+                    &::after{
+                        @extend %headerListItemStylAfter;
+                        transform: scale3d(1, 1, 1);
+                        -webkit-transform: scale3d(1, 1, 1);
+                        -moz-transform: scale3d(1, 1, 1);
+                        -ms-transform: scale3d(1, 1, 1);
+                        -o-transform: scale3d(1, 1, 1);
+                    }
+                }
+            }
+            li.dropdown{
+                position: relative;
+                padding-bottom: 3px;
+                .menu {
+                    @extend %dropdownMenu;
+                    .nav-menu-item{
+                        @extend %dropdownMenuItem;
+                    }
+                }
+                &:hover{
+                    .menu{
+                        @extend %dropdownMenuHover;
+                    }
+                }
+            }
+
+        }
+    }
+    .user-options-list{
+        padding: 25px 0;
+        text-align: $textRight;
+        li{
+            @extend %userOptionsItem;
+            &:last-of-type{
+                margin: 0;
+            }
+        }
+        .shoppingCart{
+            position: relative;
+        }
+        .shoppingMenu{
+            @extend %dropdownMenu;
+            background-color: $col-whi;
+            width: 210px;
+            padding: 0 0 40px 0;
+            right: 0;
+            box-shadow: 0 10px 20px #0000001a;
+            min-height: 100px;
+            &.active{
+                opacity: 1;
+                visibility: visible;
+            }
+            p{
+                padding: 5px 10px;
+                text-transform: capitalize;
+                font-size: $mainFontSize - 2;
+                margin-bottom: 5px;
+                span{
+                    background-color: $col-black;
+                    color: $col-whi;
+                    margin-left: 5px;
+                    display: inline-block;
+                    @include borderR(50%);
+                    font-weight: bold;
+                    @include WidHei(20px, 20px);
+                    line-height: 20px;
+                    text-align: $textCenter;
+                    font-size: $mainFontSize - 4;
+                }
+            }
+            a{
+                position: absolute;
+                @include Dir(unset, 0, 0, 0);
+                text-align: center;
+                letter-spacing: 0;
+                display: block;
+                padding: 10px 0;
+            }
+        }
+    } 
+    .small-nav-icon{
+        border: 1px solid $col-black;
+        display: none;
+        @include WidHei(35px, 35px);
+        text-align: $textCenter;
+        font-size: $mainFontSize * 1.5;
+        @include borderR(3px);
+        cursor: pointer;
+        position: absolute;
+        @include Dirtr(25px, 15px);
+        i{
+            line-height: 35px;
+        }  
+    }
+}
+/* small devices nav */
+.side-nav{
+    position: fixed;
+    @include WidHei(300px, 100%);
+    @include Dirtb(0px, -300px );
+    z-index: 10;
+    background-color: $col-whi;
+    visibility: hidden;
+    padding: 50px 20px;
+    opacity: 0;
+    overflow: auto;
+    .user-control-list{
+        margin-bottom: 20px;
+        ul{
+            display: inline;
+            >li{
+                @extend %userControlListItem;
+            }
+        }
+        #userLink{
+            display: none;
+        }
+        li{
+            @extend %userControlListItem;
+            &:last-of-type{
+                margin: 0
+            }
+        }      
+        ul{
+            display: inline;
+            li{
+                @extend %userControlListItem;
+            }
+        }
+        >li{
+            @extend %userControlListItem;
+            &:last-of-type{
+                margin: 0
+            }
+        }
+        .userLink{
+            display: none;
+        }
+        li.dropdown{
+            @extend %userControlLisDropdown;
+            .menu{
+                box-shadow: 0 10px 20px #0000001a;
+                @extend %dropdownMenu;
+                left: -20px;
+                padding: 0 !important;
+                background-color: $col-whi !important;
+                li{
+                    @extend %dropdownMenuItem;
+                    padding: 2px 15px !important;
+                    color: $col-black !important;
+                    font-size: $mainFontSize - 2 !important;
+                }
+            }
+            &:hover{
+                .menu{
+
+                    @extend %dropdownMenuHover;
+                }
+            }
+        }
+        li.dropdown{
+            @extend %userControlLisDropdown;
+            .menu{
+                box-shadow: 0 10px 20px #0000001a;
+                @extend %dropdownMenu;
+                padding: 0 !important;
+                li{
+                    @extend %dropdownMenuItem;
+                    padding: 5px 15px !important;
+                    font-size: $mainFontSize - 2 !important;
+                }
+            }
+            &:hover{
+                .menu{
+                    @extend %dropdownMenuHover;
+                }
+            }  
+        }
+    } 
+    .nav-list{
+        margin-bottom: 25px;
+        > li {
+            > .nav-list-item{
+                @extend %headerListItemStyle;
+                font-size: $mainFontSize - 1;
+                padding: 8px 0;
+            }
+        }
+    } 
+    .user-options-list{
+        text-align: $textCenter;
+        margin-bottom: 15px;
+        li{
+            @extend %userOptionsItem;
+            &:last-of-type{
+                margin: 0;
+            }
+        }
+        .shoppingCart{
+            position: relative;
+        }
+        .shoppingMenu{
+            @extend %dropdownMenu;
+            background-color: $col-whi;
+            width: 210px;
+            padding: 0 0 40px 0;
+            right: 0;
+            box-shadow: 0 10px 20px #0000001a;
+            min-height: 100px;
+            &.active{
+                opacity: 1;
+                visibility: visible;
+            }
+            p{
+                padding: 5px 10px;
+                text-transform: capitalize;
+                font-size: $mainFontSize - 2;
+                margin-bottom: 5px;
+                span{
+                    background-color: $col-black;
+                    color: $col-whi;
+                    margin-left: 5px;
+                    display: inline-block;
+                    @include borderR(50%);
+                    font-weight: bold;
+                    @include WidHei(20px, 20px);
+                    line-height: 20px;
+                    text-align: $textCenter;
+                    font-size: $mainFontSize - 4;
+                }
+            }
+            a{
+                position: absolute;
+                @include Dir(unset, 0, 0, 0);
+                text-align: center;
+                letter-spacing: 0;
+                display: block;
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+/* Header media  */
+
+@include Md{
+    nav .nav-list li{
+        margin-right: 14px  !important;
+    }
+    .user-options .user-options-list li{
+        margin-right: 15px;
+    }
+    nav .nav-list > li >.nav-list-item{
+        font-size: $mainFontSize - 1 !important;
+    }
+    .side-nav .user-control-list {
+        text-align: center;
+    }
+}
+@include Sm{
+    header nav, header .user-options, header .top-header{
+        display: none;
+    }
+    .small-nav-icon{
+        display: block !important;
+    }
+    .side-nav .user-options{
+        display: block;
+    }
+}
+
+
+/* 3.0.2 breadCrumb section */
+.breadCrumb{
+    // margin-top: 175px;
+    text-transform: capitalize;
+    padding: 40px 0;
+    background-color: $col-whi-dd;
+    font-size: $mainFontSize - 1;
+    a{
+        margin-right: 25px;
+        position: relative;
+        &::after{
+            content: "\f105";
+            color: $col-black;
+            position: absolute;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 700;
+            @include Dirtr(0, -17px);
+        }
+    }
+    span{
+        color: $col-whi-d;
+    }
+}
+/*     3.0.3 footer Section */
+footer{
+    background-color: $col-black;
+    color: $col-whi-d;
+    font-size: $mainFontSize - 1;
+    line-height: 1.7;
+    .top-content{
+        padding: 70px 0;
+        .footer-item-title{
+            text-transform: uppercase;
+            color: $col-whi;
+        }
+        .footer-list{
+            li{
+                line-height: 2.2;
+            }
+        }
+        .footer-form{
+            position: relative;
+            input{
+                border-bottom: 2px solid $col-whi;
+                background: transparent;
+                @extend %formInput;
+                color: $col-black-1;
+                padding: 15px 0;
+            }
+            button{
+                @extend %inputBtnIn;
+                span{
+                    &::before{
+                        content: "\f0e0";
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.bottom-content{
+    text-align: $textCenter;
+    padding: 20px 0;
+    border-top: 1px solid #ffffff1a;
+    i, span{
+        color: crimson;
+    }
+}
+
+// 3.0.4 blog Section 
+.blog{
+    .headerSection{
+        text-align: $textCenter;
+        span{
+            @extend %sectionHeaderSubtitle;
+        }
+    }
+    .blog-item{
+        .blog-img{
+            height: 270px;
+        }
+        .blog-item-text{
+            width: 85%;
+            margin: -35px auto 0;
+            padding: 30px;
+            background-color: $col-whi;
+            @include Transition;
+            .date{
+                display: inline-block;
+                margin-bottom: 10px;
+                img{
+                    margin-right: 4px;
+                }
+            }
+            h5{
+                font-size: $mainFontSize + 2;
+                margin-bottom: 15px;
+            }
+        }
+        &:hover .blog-item-text{
+            box-shadow: 0 10px 20px #0000001a;
+        }
+        &:hover .border-hover::after{
+            width: 100%;
+            background-color: $col-black;
+        }
+    }
+}

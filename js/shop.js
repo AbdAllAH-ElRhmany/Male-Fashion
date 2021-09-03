@@ -30,6 +30,9 @@ let sizeFilter = 'all';
 // Filter Function
 
 productsFilter = () => {
+	$('.loading-overlay').fadeIn();
+    setTimeout(() => {
+        $('.loading-overlay').fadeOut();
 	let filteredPro = products.filter((item) => {
 		return (
 			item.category.find((e) => e == cateFilter) &&
@@ -44,8 +47,8 @@ productsFilter = () => {
 			'<p class="mt-4" style="font-size: 24px">There are no products with this specification</p>';
 	} else {
 		listProductUI(filteredPro, 'col-lg-4');
-	}
-	console.log(filteredPro.length);
+		}
+	}, 2000);
 };
 
 // Get Filter Value On Click on a Filter Btn And Call Filter Function

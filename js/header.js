@@ -1,7 +1,7 @@
 // PreLoader
-$('.sk-cube-grid').fadeOut(4000, function () {
-	$('.preloader-bg').fadeOut(2000, function () {});
-});
+// $('.sk-cube-grid').fadeOut(4000, function () {
+// 	$('.preloader-bg').fadeOut(2000, function () {});
+// });
 
 // Small Devices nav Control
 $(document).ready(function () {

@@ -11,27 +11,27 @@ favProductUI = (productsInFav) => {
 	) {
 		let productUI = productsInFav.map((item) => {
 			return `
-            <div class="favouriteItem mt-4 d-flex justify-content-between align-items-center">
-                <div class="favouriteItem-info"><a href="product.html" onclick="setProductId(${item.id})">
-                    <div class="favouriteItem-img"><img src="${item.image[0]}" alt=""></div>
-                    <div class="favouriteItem-text">
-                        <h5 class="favouriteItem-text-title">${item.title}</h5>
-                        <h6 class="favouriteItem-text-price">$${item.price}</h6>
-                        <div class="rating" id='rating'>
-                        <i class="fas ${item.rate > 0 ? 'active' : ''} fa-star"></i>
-                        <i class="fas ${item.rate > 1 ? 'active' : ''}  fa-star"></i>
-                        <i class="fas ${item.rate > 2 ? 'active' : ''}  fa-star"></i>
-                        <i class="fas ${item.rate > 3 ? 'active' : ''} fa-star"></i>
-                        <i class="fas ${item.rate > 4 ? 'active' : ''} fa-star"></i>
-                        </div><!-- ./rating -->
-                    </div><!-- ./favouriteItem-text -->
+			<div class="favouriteItem mt-4 d-flex justify-content-between align-items-center">
+				<div class="favouriteItem-info"><a href="product.html" onclick="setProductId(${item.id})">
+					<div class="favouriteItem-img"><img src="${item.image[0]}" alt=""></div>
+					<div class="favouriteItem-text">
+						<h5 class="favouriteItem-text-title">${item.title}</h5>
+						<h6 class="favouriteItem-text-price">$${item.price}</h6>
+						<div class="rating" id='rating'>
+						<i class="fas ${item.rate > 0 ? 'active' : ''} fa-star"></i>
+						<i class="fas ${item.rate > 1 ? 'active' : ''}  fa-star"></i>
+						<i class="fas ${item.rate > 2 ? 'active' : ''}  fa-star"></i>
+						<i class="fas ${item.rate > 3 ? 'active' : ''} fa-star"></i>
+						<i class="fas ${item.rate > 4 ? 'active' : ''} fa-star"></i>
+						</div><!-- ./rating -->
+					</div><!-- ./favouriteItem-text -->
 					</a>
-                </div><!-- ./favouriteItem-info -->
-                <div class="favouriteItem-btn"><button onclick="delFromFav(${
+				</div><!-- ./favouriteItem-info -->
+				<div class="favouriteItem-btn"><button onclick="delFromFav(${
 					item.id
 				})">Remove from Favourites</button></div>
-            </div><!-- ./favouriteItem -->
-            `;
+			</div><!-- ./favouriteItem -->
+			`;
 		});
 		favouriteProDom.innerHTML = productUI.join('');
 	} else {
